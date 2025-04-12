@@ -129,24 +129,24 @@
   </footer>
 
   <script src="script.js"></script> <!-- Link to your JavaScript -->
-      <script> 
-  window.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-links a');
-  let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
-
-  // Default to index.html if root, otherwise use the actual file
-  if (!currentPage || currentPage === '') {
-    currentPage = 'index.html';
-  }
-
-  navLinks.forEach(link => {
-    let href = link.getAttribute('href').split('?')[0]; // remove query params
-
-    if (href === currentPage) {
-      link.classList.add('active');
+  <script> 
+    window.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
+  
+    // Default to index.html if root, otherwise use the actual file
+    if (!currentPage || currentPage === '') {
+      currentPage = 'index.html';
     }
+  
+    navLinks.forEach(link => {
+      let href = link.getAttribute('href').split('?')[0]; // remove query params
+  
+      if (href === currentPage) {
+        link.classList.add('active');
+      }
+    });
   });
-});
 </script>
 
 </body>
