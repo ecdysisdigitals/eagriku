@@ -27,6 +27,16 @@
   border-bottom: 2px solid #007b1c; /* Add underline on hover */
 }
 
+.hero-logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.center-logo {
+  width: 100px; /* adjust size as needed */
+  height: auto;
+}
+
 /* logo title container */
 .logo-title-container {
   display: flex;
