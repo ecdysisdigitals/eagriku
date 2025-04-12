@@ -30,12 +30,29 @@
 .hero-logo {
   text-align: center;
   margin: 20px 0;
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .center-logo {
-  width: 200px; /* adjust size as needed */
+  width: 200px; /* adjust as needed */
   height: auto;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease-in-out;
 }
+
 
 /* logo title container */
 .logo-title-container {
@@ -199,7 +216,7 @@ mark {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10%;
+  margin-top: 8%;
   transition: background-color 0.3s ease;
   text-align: center;
 }
