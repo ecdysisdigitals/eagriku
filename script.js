@@ -136,7 +136,9 @@ document.getElementById("search-input").addEventListener("keypress", function (e
 
 window.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-links a');
-  const currentPage = window.location.pathname.split('/').pop();
+  let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
+
+  if (currentPage === '') currentPage = 'index.html';
 
   navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPage) {
@@ -144,6 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 
 
