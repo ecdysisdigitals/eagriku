@@ -138,14 +138,19 @@ window.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-links a');
   let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
 
-  if (currentPage === '') currentPage = 'index.html';
+  if (!currentPage || currentPage === '') {
+    currentPage = 'index.html'; // fallback if you are on root
+  }
 
   navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    let href = link.getAttribute('href').split('?')[0]; // remove params from href too
+
+    if (href === currentPage) {
       link.classList.add('active');
     }
   });
 });
+
 
 
 
