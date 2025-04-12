@@ -138,19 +138,20 @@ window.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-links a');
   let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
 
+  // Default to index.html if root, otherwise use the actual file
   if (!currentPage || currentPage === '') {
     currentPage = 'index.html';
-    currentPage = 'Pahayag ng Impormante.html';// fallback if you are on root
   }
 
   navLinks.forEach(link => {
-    let href = link.getAttribute('href').split('?')[0]; // remove params from href too
+    let href = link.getAttribute('href').split('?')[0]; // remove query params
 
     if (href === currentPage) {
       link.classList.add('active');
     }
   });
 });
+
 
 
 
