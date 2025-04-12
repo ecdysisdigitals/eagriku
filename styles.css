@@ -191,7 +191,7 @@ mark {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10%;
+  margin-top: 5%;
   transition: background-color 0.3s ease;
   text-align: center;
 }
@@ -1358,7 +1358,7 @@ footer {
 }
 
 .center-logo {
-  width: 100px; /* adjust as needed */
+  width: 200px; /* adjust as needed */
   height: auto;
   animation: pulse 2s infinite;
   transition: transform 0.3s ease-in-out;
