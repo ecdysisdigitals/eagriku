@@ -199,7 +199,7 @@ mark {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 15%;
+  margin-top: 10%;
   transition: background-color 0.3s ease;
   text-align: center;
 }
