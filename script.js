@@ -139,7 +139,8 @@ window.addEventListener('DOMContentLoaded', () => {
   let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
 
   if (!currentPage || currentPage === '') {
-    currentPage = 'index.html'; // fallback if you are on root
+    currentPage = 'index.html';
+    currentPage = 'Pahayag ng Impormante.html';// fallback if you are on root
   }
 
   navLinks.forEach(link => {
