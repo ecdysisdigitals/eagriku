@@ -34,8 +34,6 @@
 .center-logo {
   width: 200px; /* adjust as needed */
   height: auto;
-  animation: pulse 2s infinite;
-  transition: transform 0.3s ease-in-out;
 }
 
 
