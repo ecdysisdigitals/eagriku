@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahayag ng Impormante</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="image/logo.png" alt="E-AgriKu Logo" class="logo-img" >
+        <h1 class="logo-text">E-AgriKu</h1>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Pangunahing Pahina</a></li>
+        <li><a href="Paniniwala at Gawi.html">Paniniwala at Gawi</a></li>
+        <li><a href="Kabuluhan.html">Kabuluhan</a></li>
+        <li><a href="Mga Butil ng Kaalaman.html">Mga Butil ng Kaalaman</a></li>
+        <li><a href="Mga mananaliksik.html">Mga Mananaliksik</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="researchers-section">
+    <h1>MGA MANANALIKSIK</h1>
+    <p>Kilalanin ang mga taong nagsaliksik, nagtipon, at nagbahagi ng mayamang kaalaman tungkol sa tradisyunal na pagsasaka sa Talisay, Camarines Norte.</p>
+
+    <!-- Researchers Grid -->
+    <div class="researchers-grid">
+      <!-- Researcher Card 1 -->
+      <div class="researcher-card">
+        <div class="profile-circle">
+          <img src="image/Himor,Jhana Camille.jpeg" alt="Ms. Jhana Camille Himor" class="profile-image">
+        </div>
+        <h3>Jhana Camille Himor</h3>
+        <p class="description">
+          Si Jhana Camille Himor ay isang mag-aaral na kasalukuyang nasa ikatlong taon sa kolehiyo ng Edukasyon, Camarines Norte State College na tubong Sta. Elena at kasalukuyang naninirahan sa Daet Camarines Norte. Inspirasyon niya sa pag-aaral ang bayang kanyang pinagmulan kung saan pagsasaka rin ang pangunahing pangkabuhayan. Layunin nila kasama ng kanyang kapwa mananaliksik na alamin at maitala ang mga natitira pang mga paniniwala sa pagsasaka sapagkat batid nila ang banta sa pagkawala ng mga ito dulot ng modernisasyon. At layunin rin nila na maipabatid ang mga natitira pang paniniwala sa mga susunod na henerasyon ng magsasaka sa pamamagitan ng pagbubuo ng pook sapot (website).
+        </p>
+      </div>
+
+      <!-- Researcher Card 2 -->
+      <div class="researcher-card">
+        <div class="profile-circle">
+          <img src="image/Molina, John Glenn B.jpg" alt="Mr. John Glenn B. Molina" class="profile-image">
+        </div>
+        <h3>John Glenn B. Molina</h3>
+        <p class="description">
+          Si John Glenn B. Molina ay isang mag-aaral na nasa programang Bachelor of Secondary Education Major in Filipino sa Camarines Norte State College - Abaño Campus, na kasalukuyang naninirahan sa San Lorenzo Ruiz, Camarines Norte. Bilang isang mananaliksik, kasama ang kaniyang katuwang, sila ay nakatuon sa pagtuklas at pagtatala ng mga paniniwalang nao-obserbahan at isinasagawa ng mga susi sa preserbasyon ng mga paniniwala ng mga magsasaka sa bayan ng Talisay, Camarines Norte. Layunin ng kanilang pananaliksik na dalumatin ang kultura ng pagsasaka at maitala ang mahahalagang paniniwalang ito sa pamamagitan ng isang website, upang hindi ito makaliimutan ng mga susunod na henerasyon at magamit sa pagpapanatili ng mga pang-agrikulturang kaalaman, partikular sa larangan ng pagsasaka ng palay.
+        </p>
+      </div>
+
+      <!-- Researcher Card 3 -->
+      <div class="researcher-card small-card">
+        <div class="profile-circle">
+          <img src="image/Sir Edwin.jpg" alt="Edwin R. Ichiano, PhD" class="profile-image">
+        </div>
+        <h3>Edwin R. Ichiano, PhD</h3>
+        <p class="position">Tagapayo</p>
+      </div>
+
+      <!-- Researcher Card 4 -->
+      <div class="researcher-card small-card">
+        <div class="profile-circle">
+          <img src="image/Sir Ryan.jpg" alt="Ryan S. Rodriguez, PhD" class="profile-image">
+        </div>
+        <h3>Ryan S. Rodriguez, PhD</h3>
+        <p class="position">Propesor sa Pananaliksik</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">2025 E-AgriKu. Lahat ng karapatan ay nakalaan.</p>
+      <p class="thankyou">Maraming Salamat!</p>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript -->
+      <script> 
+  window.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  let currentPage = decodeURIComponent(window.location.pathname.split('/').pop().split('?')[0]);
+
+  // Default to index.html if root, otherwise use the actual file
+  if (!currentPage || currentPage === '') {
+    currentPage = 'index.html';
+  }
+
+  navLinks.forEach(link => {
+    let href = link.getAttribute('href').split('?')[0]; // remove query params
+
+    if (href === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+  <script src="script.js"></script>
+
+</body>
+</html>
